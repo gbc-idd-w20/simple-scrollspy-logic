@@ -1,0 +1,50 @@
+html, body, main {
+	height: 100%;
+}
+body {
+	font: 1em helvetica, sans-serif;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+.panel {
+	position: fixed;
+	top: 1em;
+	left: 1em;
+	background-color: #eee;
+	padding: 1em;
+	box-shadow: 0 0 1em rgba(0,0,0,0.2);
+}
+.full-viewport {
+	height: 100%;
+	background-color: tomato;
+	display: grid;
+	place-content: center;
+}
+.full-viewport:nth-child(even) {
+	background-color: gold;
+}
+.full-viewport h2 {
+	margin: 0;
+	font: 900 3em helvetica, sans-serif;
+	text-transform: uppercase;
+	text-shadow: 0 0 0.125em rgba(0,0,0,0.2);
+}
+
+/* .seen {
+	text-decoration: line-through;
+} */
+.seen::after {
+	content: '👈';
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 1;
+	min-width: 0.95em;
+	height: 0.95em;
+	margin-left: 0.5em;
+	padding: 0 0.125em;
+	/* could also use a background-image, whatever */
+	/* background-color: #aaa;   */
+}
